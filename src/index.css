@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #001f33;
+  color: white;
+}
+
+/* Optional: Add soft noise texture */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: url('https://transparenttextures.com/patterns/asfalt-light.png') repeat;
+  opacity: 0.02;
+  pointer-events: none;
+}
