@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import ProjectCard from './ProjectCard';
 
@@ -6,24 +6,36 @@ const Projects: React.FC = () => {
   const projects = [
     {
       id: 1,
-      title: "Forest Endangered Detection System",
-      description: "Developed a forest detection system using tilt, gas, and fire sensors with Arduino to detect smoke, fire, and deforestation. Captures images and triggers alerts in real-time when motion, smoke, or fire is detected.",
-      tools: ["Arduino", "Tilt sensor", "Gas sensor", "Fire sensor"],
-      image: "https://images.pexels.com/photos/957024/forest-trees-perspective-bright-957024.jpeg"
+      title: "50 Days of DSA Coding Challenge Level-1",
+      description: "Completed a self-driven 50 Days of Coding Challenge focused on mastering Data Structures and Algorithms. Solved problems daily on CodeChef and LeetCode, covering topics such as arrays, strings.",
+      tools: ["Java", "CodeChef", "LeetCode"],
+      image : "/laptop.png",
+      giturl: "https://github.com/Shambhavi0212/50-Days-of-Coding-DSA-Level-1"
     },
     {
       id: 2,
-      title: "Skin Cancer Detection Project",
-      description: "Developed an AI system for early skin cancer detection using image analysis, improving accuracy and user interface for better usability.",
-      tools: ["Python", "TensorFlow", "Keras", "NumPy", "OpenCV", "Flask", "HTML", "CSS"],
-      image: "https://images.pexels.com/photos/3786157/pexels-photo-3786157.jpeg"
+      title: "Forest Endangered Detection System",
+      description: "Developed a forest detection system using tilt, gas, and fire sensors with Arduino to detect smoke, fire, and deforestation. Captures images and triggers alerts in real-time when motion, smoke, or fire is detected.",
+      tools: ["Arduino", "Tilt sensor", "Gas sensor", "Fire sensor"],
+      image: "https://images.pexels.com/photos/957024/forest-trees-perspective-bright-957024.jpeg",
+      giturl: "https://github.com/shambhavi0212"
+
     },
     {
       id: 3,
+      title: "Skin Cancer Detection Project",
+      description: "Developed an AI system for early skin cancer detection using image analysis, improving accuracy and user interface for better usability.",
+      tools: ["Python", "TensorFlow", "Keras", "NumPy", "OpenCV", "Flask", "HTML", "CSS"],
+      image: "https://images.pexels.com/photos/3786157/pexels-photo-3786157.jpeg",
+      giturl: "https://github.com/shambhavi0212"
+    },
+    {
+      id: 4,
       title: "Pizza Calculator Billing System",
       description: "Java-based console application using core Java features for pizza billing with detailed bill summary, taxes, and discounts.",
       tools: ["Java", "JDK", "Eclipse"],
-      image: "https://images.pexels.com/photos/1146760/pexels-photo-1146760.jpeg"
+      image: "https://images.pexels.com/photos/1146760/pexels-photo-1146760.jpeg",
+      giturl: "https://github.com/shambhavi0212"
     }
   ];
 

@@ -13,7 +13,7 @@ const Hero: React.FC = () => {
           <div className="relative w-[350px] h-[350px] sm:w-[250px] sm:h-[250px] md:w-[400px] md:h-[400px]">
             <div className="w-full h-full rounded-full overflow-hidden border-4 border-[rgba(128,223,255,0.8)] shadow-[0_0_20px_8px_rgba(2,187,254,0.7)]">
               <img 
-                src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg" 
+                src="/profile.jpg" 
                 alt="Profile" 
                 className="w-full h-full object-cover"
               />

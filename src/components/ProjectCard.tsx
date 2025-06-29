@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowUpRight } from 'lucide-react';
+import { Github } from 'lucide-react';
 
 interface Project {
   id: number;
@@ -8,6 +8,7 @@ interface Project {
   description: string;
   tools: string[];
   image: string;
+  giturl: string;
 }
 
 interface ProjectCardProps {
@@ -17,7 +18,7 @@ interface ProjectCardProps {
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
   const [isHovered, setIsHovered] = useState(false);
-  
+
   return (
     <motion.div
       className="group h-full"
@@ -40,15 +41,20 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
           <div className="absolute inset-0 bg-gradient-to-t from-[#001f33] to-transparent opacity-70"></div>
           
           <div className="absolute top-4 right-4">
-            <div className="relative overflow-hidden">
+            <a 
+              href={project.giturl} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative overflow-hidden"
+            >
               <motion.div
                 className="w-10 h-10 bg-[#001f33]/80 backdrop-blur-sm rounded-full flex items-center justify-center cursor-pointer border border-[#004d80]/50 hover:border-[#80dfff]/70 transition-colors duration-300"
                 whileHover={{ scale: 1.1 }}
                 transition={{ type: 'spring', stiffness: 400, damping: 10 }}
               >
-                <ArrowUpRight size={18} className="text-[#80dfff]" />
+                <Github size={18} className="text-[#80dfff]" />
               </motion.div>
-            </div>
+            </a>
           </div>
         </div>
 

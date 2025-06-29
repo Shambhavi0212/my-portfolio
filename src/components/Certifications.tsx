@@ -1,39 +1,79 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Award, Cloud, Database, Bot, FileCheck } from 'lucide-react';
+import { Cloud, Database, Bot, FileCheck, List, Layout, Code, Type } from 'lucide-react';
 
 const Certifications: React.FC = () => {
   const certifications = [
     {
-      title: "ServiceNow Certified System Administrator (CSA)",
-      description: "Successfully completed professional certification in ServiceNow administration, covering configuration, UI customization, and workflow automation.",
-      icon: <FileCheck className="w-8 h-8" />,
-      color: "from-emerald-500 to-green-600"
-    },
-    {
-      title: "Google Cloud – Generative AI Virtual Internship",
-      description: "Completed 10-week internship program focused on generative AI technologies and cloud implementations.",
-      icon: <Cloud className="w-8 h-8" />,
-      color: "from-blue-500 to-indigo-600"
-    },
-    {
-      title: "Data Structures and Algorithms",
-      description: "Certification on advanced DSA concepts from Infosys Springboard.",
-      icon: <Database className="w-8 h-8" />,
-      color: "from-purple-500 to-violet-600"
-    },
-    {
-      title: "Describe Cloud Service Types",
-      description: "Microsoft certification focused on cloud computing fundamentals and service models.",
-      icon: <Cloud className="w-8 h-8" />,
-      color: "from-sky-500 to-blue-600"
-    },
-    {
-      title: "ChatGPT for Everyone",
-      description: "Certification from GUVI on utilizing AI language models effectively.",
-      icon: <Bot className="w-8 h-8" />,
-      color: "from-rose-500 to-pink-600"
-    }
+    "title": "ServiceNow Certified System Administrator (CSA)",
+    "description": "Successfully completed professional certification in ServiceNow administration, covering configuration, UI customization, and workflow automation.",
+    "icon": "FileCheck",
+    "color": "from-emerald-500 to-green-600",
+    "url": "/servicenow-csa-certificate.pdf"
+  },
+  {
+    "title": "Google Cloud – Generative AI Virtual Internship",
+    "description": "Completed 10-week internship program focused on generative AI technologies and cloud implementations.",
+    "icon": "Cloud",
+    "color": "from-blue-500 to-indigo-600",
+    "url": "/google-cloud-generative-ai-internship.pdf"
+  },
+  {
+    "title": "Data Structures and Algorithms",
+    "description": "Certification on advanced DSA concepts from Infosys Springboard.",
+    "icon": "Database",
+    "color": "from-purple-500 to-violet-600",
+    "url": "/infosys-dsa-certificate.pdf"
+  },
+  {
+    "title": "Describe Cloud Service Types",
+    "description": "Microsoft certification focused on cloud computing fundamentals and service models.",
+    "icon": "Cloud",
+    "color": "from-sky-500 to-blue-600",
+    "url": "/microsoft-cloud-service-certificate.pdf"
+  },
+  {
+    "title": "ChatGPT for Everyone",
+    "description": "Certification from GUVI on utilizing AI language models effectively.",
+    "icon": "Bot",
+    "color": "from-rose-500 to-pink-600",
+    "url": "https://www.guvi.in/verify-certificate?id=d167LK83893h0JgG25&course=chatgptenglish"
+  },
+  {
+    "title": "Google Cloud Computing Foundations",
+    "description": "Google Cloud Skill Boost certification on cloud computing fundamentals.",
+    "icon": "Cloud",
+    "color": "from-blue-400 to-blue-700",
+    "url": "https://www.credly.com/badges/112a7ac7-3c7a-4706-a9e9-df61a94ba597"
+  },
+  {
+    "title": "Practice Arrays",
+    "description": "CodeChef certification on array concepts and problem-solving.",
+    "icon": "List",
+    "color": "from-yellow-500 to-amber-600",
+    "url": "https://www.codechef.com/certificates/public/d37c328"
+  },
+  {
+    "title": "Learn Java",
+    "description": "CodeChef certification covering Java fundamentals.",
+    "icon": "Code",
+    "color": "from-orange-500 to-red-600",
+    "url": "https://www.codechef.com/certificates/public/8df332b"
+  },
+  {
+    "title": "Practice Strings",
+    "description": "CodeChef certification on string manipulation and problem-solving.",
+    "icon": "Type",
+    "color": "from-pink-500 to-fuchsia-600",
+    "url": "https://example.com/codechef-strings-certificate"
+  },
+  {
+    "title": "Learn HTML/CSS",
+    "description": "CodeChef certification covering the basics of HTML and CSS for web development.",
+    "icon": "Layout",
+    "color": "from-lime-500 to-green-700",
+    "url": "https://example.com/codechef-html-css-certificate"
+  }
   ];
 
   return (
@@ -71,23 +111,19 @@ const Certifications: React.FC = () => {
               </div>
               <div className="p-6">
                 <h4 className="text-xl font-semibold mb-3 text-white">{cert.title}</h4>
-                <p className="text-gray-300 text-sm">{cert.description}</p>
+                <p className="text-gray-300 text-sm mb-4">{cert.description}</p>
+                <a 
+                  href={cert.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block mt-2 px-4 py-2 text-sm font-medium bg-[#80dfff]/20 border border-[#80dfff]/50 rounded-full text-white hover:bg-[#80dfff]/30 transition-all duration-300"
+                >
+                  View Certificate
+                </a>
               </div>
             </motion.div>
           ))}
         </div>
-
-        <motion.div 
-          className="mt-16 text-center"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          <a href="#" className="inline-flex items-center px-6 py-3 bg-[#80dfff]/20 border border-[#80dfff]/50 rounded-full text-white hover:bg-[#80dfff]/30 transition-all duration-300">
-            <Award className="mr-2 h-5 w-5" /> View All Certifications
-          </a>
-        </motion.div>
       </div>
     </section>
   );
