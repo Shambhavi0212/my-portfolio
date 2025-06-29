@@ -5,8 +5,8 @@ import { BookOpen, Award } from 'lucide-react';
 const Education: React.FC = () => {
   const education = [
     {
-      degree: "Bachelor of Technology in Computer Science and Engineering",
-      institution: "St. Peter's Engineering College, Hyderabad - JNTUH",
+      degree: "Bachelor of Technology in CSE - JNTUH",
+      institution: "St. Peter's Engineering College, Hyderabad",
       period: "2022 – 2026",
       score: "CGPA: 9.64 till 2nd Year",
       icon: <BookOpen className="w-6 h-6 text-[#80dfff]" />
