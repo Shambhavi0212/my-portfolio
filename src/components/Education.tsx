@@ -6,13 +6,13 @@ const Education: React.FC = () => {
   const education = [
     {
       degree: "Bachelor of Technology in Computer Science and Engineering",
-      institution: "St. Peter's Engineering College, Hyderabad",
+      institution: "St. Peter's Engineering College, Hyderabad - JNTUH",
       period: "2022 – 2026",
       score: "CGPA: 9.64 till 2nd Year",
       icon: <BookOpen className="w-6 h-6 text-[#80dfff]" />
     },
     {
-      degree: "Intermediate (MPC)",
+      degree: "Intermediate (MPC) - TSBIE",
       institution: "Bhagyarathi Junior College, Telangana",
       period: "2022",
       score: "CGPA: 9.75",
