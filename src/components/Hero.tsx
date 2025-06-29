@@ -11,7 +11,7 @@ const Hero: React.FC = () => {
         {/* Image */}
         <div className="w-full md:w-1/3 flex justify-center">
           <div className="relative w-[350px] h-[350px] sm:w-[250px] sm:h-[250px] md:w-[400px] md:h-[400px]">
-            <div className="w-full h-full rounded-full overflow-hidden border-4 border-[rgba(128,223,255,0.8)] shadow-[0_0_20px_8px_rgba(2,187,254,0.7)]">
+            <div className="w-full h-full rounded-full overflow-hidden border-4 border-cyan-400 shadow-[0_0_30px_6px_rgba(10,105,238,0.4)]">
               <img 
                 src="/profile.jpg" 
                 alt="Profile" 
@@ -27,7 +27,7 @@ const Hero: React.FC = () => {
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
             Vallapi Shambhavi
           </h1>
-          <h2 className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-6">
+          <h2 className="text-lg sm:text-xl md:text-2xl text-sky-400 mb-6">
             Aspiring Software Engineer
           </h2>
           <p className="text-gray-300 mb-8 max-w-2xl mx-auto md:mx-0">
@@ -40,7 +40,7 @@ const Hero: React.FC = () => {
             <a
               href="/resume.pdf"
               download
-              className="bg-transparent hover:bg-white/10 border border-white/30 text-white py-3 px-6 rounded-full transition duration-300 transform hover:scale-105 cursor-pointer inline-flex items-center justify-center"
+              className="bg-transparent hover:bg-cyan-500/10 border border-cyan-400 text-white py-3 px-6 rounded-full transition duration-300 transform hover:scale-105 shadow-md shadow-cyan-500/30"
             >
               Download Resume
             </a>
@@ -50,7 +50,7 @@ const Hero: React.FC = () => {
               smooth={true}
               offset={-80}
               duration={500}
-              className="bg-transparent hover:bg-white/10 border border-white/30 text-white py-3 px-6 rounded-full transition duration-300 transform hover:scale-105 cursor-pointer inline-flex items-center justify-center"
+              className="bg-transparent hover:bg-cyan-500/10 border border-cyan-400 text-white py-3 px-6 rounded-full transition duration-300 transform hover:scale-105 shadow-md shadow-cyan-500/30"
             >
               View Projects
             </Link>
