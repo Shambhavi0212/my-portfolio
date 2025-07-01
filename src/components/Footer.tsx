@@ -44,7 +44,7 @@ const Footer: React.FC = () => {
             <ul className="space-y-2 text-gray-400">
               <li>Hyderabad, Telangana</li>
               <li>+91 9182065628</li>
-              <li>vallapishambhavi@gmail.com</li>
+              <li>shambhavivallapi@gmail.com</li>
             </ul>
           </div>
         </div>
