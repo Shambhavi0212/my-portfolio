@@ -19,7 +19,7 @@ const Footer: React.FC = () => {
               <a href="https://www.linkedin.com/in/shambhavi0212/" className="text-gray-400 hover:text-[#80dfff] transition-colors">
                 <Linkedin size={20} />
               </a>
-              <a href="mailto:vallapishambhavi@gmail.com" className="text-gray-400 hover:text-[#80dfff] transition-colors">
+              <a href="mailto:shambhavivallapi@gmail.com" className="text-gray-400 hover:text-[#80dfff] transition-colors">
                 <Mail size={20} />
               </a>
             </div>

@@ -63,7 +63,7 @@ const Hero: React.FC = () => {
             <a href="https://www.linkedin.com/in/shambhavi0212/" className="text-white hover:text-[#80dfff] transition-colors">
               <Linkedin size={24} />
             </a>
-            <a href="mailto:vallapishambhavi@gmail.com" className="text-white hover:text-[#80dfff] transition-colors">
+            <a href="mailto:shambhavivallapi@gmail.com" className="text-white hover:text-[#80dfff] transition-colors">
               <Mail size={24} />
             </a>
           </div>
