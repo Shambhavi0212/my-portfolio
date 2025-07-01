@@ -38,7 +38,7 @@ const Hero: React.FC = () => {
 
           <div className="flex flex-wrap gap-4 justify-center md:justify-start mb-8">
             <a
-              href="/resume.pdf"
+              href="/Vallapi_Shambhavi_Resume.pdf"
               download
               className="bg-transparent hover:bg-cyan-500/10 border border-cyan-400 text-white py-3 px-6 rounded-full transition duration-300 transform hover:scale-105 shadow-md shadow-cyan-500/30"
             >
