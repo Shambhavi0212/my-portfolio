@@ -86,7 +86,7 @@ const Certifications: React.FC = () => {
       description: "CodeChef certification on string manipulation and problem-solving.",
       icon: "Type",
       color: "from-pink-500 to-fuchsia-600",
-      url: "https://www.codechef.com/certificates/public/aed9fb7"
+      url: ""
     },
     {
       title: "Learn HTML/CSS",
