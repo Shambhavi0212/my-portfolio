@@ -94,7 +94,13 @@ const Contact: React.FC = () => {
           >
             <h3 className="text-2xl font-bold mb-6">Send Me a Message</h3>
             
-            <form className="space-y-6">
+            <form 
+              action="https://formspree.io/f/mwpbjrnw" 
+              method="POST"
+              className="space-y-6"
+            >
+              <input type="hidden" name="_subject" value="New message from your portfolio site" />
+
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-1">
@@ -103,8 +109,10 @@ const Contact: React.FC = () => {
                   <input 
                     type="text" 
                     id="name" 
-                    className="w-full bg-[#001f33]/80 border border-[#004d80]/50 rounded-lg py-3 px-4 text-white focus:outline-none focus:ring-2 focus:ring-[#80dfff]/50 focus:border-transparent"
+                    name="name"
                     placeholder="John Doe"
+                    className="w-full bg-[#001f33]/80 border border-[#004d80]/50 rounded-lg py-3 px-4 text-white focus:outline-none focus:ring-2 focus:ring-[#80dfff]/50 focus:border-transparent"
+                    required
                   />
                 </div>
                 <div>
@@ -114,12 +122,14 @@ const Contact: React.FC = () => {
                   <input 
                     type="email" 
                     id="email" 
-                    className="w-full bg-[#001f33]/80 border border-[#004d80]/50 rounded-lg py-3 px-4 text-white focus:outline-none focus:ring-2 focus:ring-[#80dfff]/50 focus:border-transparent"
+                    name="email"
                     placeholder="john@example.com"
+                    className="w-full bg-[#001f33]/80 border border-[#004d80]/50 rounded-lg py-3 px-4 text-white focus:outline-none focus:ring-2 focus:ring-[#80dfff]/50 focus:border-transparent"
+                    required
                   />
                 </div>
               </div>
-              
+
               <div>
                 <label htmlFor="subject" className="block text-sm font-medium text-gray-300 mb-1">
                   Subject
@@ -127,24 +137,31 @@ const Contact: React.FC = () => {
                 <input 
                   type="text" 
                   id="subject" 
-                  className="w-full bg-[#001f33]/80 border border-[#004d80]/50 rounded-lg py-3 px-4 text-white focus:outline-none focus:ring-2 focus:ring-[#80dfff]/50 focus:border-transparent"
+                  name="subject"
                   placeholder="Job Opportunity"
+                  className="w-full bg-[#001f33]/80 border border-[#004d80]/50 rounded-lg py-3 px-4 text-white focus:outline-none focus:ring-2 focus:ring-[#80dfff]/50 focus:border-transparent"
+                  required
                 />
               </div>
-              
+
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-1">
                   Message
                 </label>
                 <textarea 
                   id="message" 
-                  rows={5} 
-                  className="w-full bg-[#001f33]/80 border border-[#004d80]/50 rounded-lg py-3 px-4 text-white focus:outline-none focus:ring-2 focus:ring-[#80dfff]/50 focus:border-transparent resize-none"
+                  name="message"
+                  rows={5}
                   placeholder="Your message here..."
+                  className="w-full bg-[#001f33]/80 border border-[#004d80]/50 rounded-lg py-3 px-4 text-white focus:outline-none focus:ring-2 focus:ring-[#80dfff]/50 focus:border-transparent resize-none"
+                  required
                 ></textarea>
               </div>
-              
-              <button type="submit" className="w-full bg-gradient-to-r from-[#004d80] to-[#0077b6] hover:from-[#0077b6] hover:to-[#004d80] text-white py-3 px-6 rounded-lg flex items-center justify-center space-x-2 transition-all duration-300 transform hover:scale-[1.02]">
+
+              <button 
+                type="submit" 
+                className="w-full bg-gradient-to-r from-[#004d80] to-[#0077b6] hover:from-[#0077b6] hover:to-[#004d80] text-white py-3 px-6 rounded-lg flex items-center justify-center space-x-2 transition-all duration-300 transform hover:scale-[1.02]"
+              >
                 <span>Send Message</span>
                 <Send className="w-4 h-4" />
               </button>

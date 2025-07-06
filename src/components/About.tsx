@@ -16,22 +16,26 @@ const About: React.FC = () => {
     {
       icon: <Code className="w-8 h-8 text-[#80dfff]" />,
       title: 'Problem Solving',
-      description: 'Strong programming knowledge in Java with a good grasp of OOP concepts and algorithms.'
+      description: 'Strong programming knowledge in Java with a good grasp of OOP concepts and algorithms.',
+      color: 'rgba(255, 231, 11, 0.84)' // Adjusted color for better visibility
     },
     {
       icon: <Users className="w-8 h-8 text-[#80dfff]" />,
       title: 'Team Collaboration & Leadership',
-      description: 'Led teams and contributed actively in hackathons and workshops, showing good teamwork and leadership skills.'
+      description: 'Led teams and contributed actively in hackathons and workshops, showing good teamwork and leadership skills.',
+      color: 'rgb(208, 144, 200)' // Adjusted color for better visibility
     },
     {
       icon: <BookOpen className="w-8 h-8 text-[#80dfff]" />,
       title: 'Quick Learner & Adaptable',
-      description: 'Completed diverse technical certifications including cloud technologies and AI internships.'
+      description: 'Completed diverse technical certifications including cloud technologies and AI internships.',
+      color: 'rgba(0, 253, 211, 0.96)' // Adjusted color for better visibility
     },
     {
       icon: <Award className="w-8 h-8 text-[#80dfff]" />,
       title: 'Social Responsibility',
-      description: 'Active participation in NSS and community service programs, showing leadership beyond academics.'
+      description: 'Active participation in NSS and community service programs, showing leadership beyond academics.',
+      color:'rgb(5, 99, 0)'
     }
   ];
 
@@ -48,9 +52,7 @@ const About: React.FC = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">About Me</h2>
           <div className="w-20 h-1 bg-[#80dfff] mx-auto mb-8"></div>
           <p className="max-w-3xl mx-auto text-gray-300">
-            Aspiring Software Engineer with a strong foundation in Java, frontend technologies (HTML, CSS, JavaScript), 
-            and problem-solving skills. Knowledgeable in OOPs, DSA, and experienced in collaborative projects and hackathons, 
-            showcasing leadership and creativity.
+            I’m an enthusiastic and driven Computer Science student with expertise in Java, OOP principles, DSA, and modern frontend technologies. I enjoy transforming ideas into functional, user-friendly applications. My journey includes leading teams in hackathons, contributing to open-source projects, and continuously expanding my skill set through certifications in cloud technologies and AI.
           </p>
         </motion.div>
 
@@ -75,7 +77,12 @@ const About: React.FC = () => {
                 <div className="bg-[#001f33] p-3 rounded-full w-fit mb-4">
                   {item.icon}
                 </div>
-                <h3 className="text-xl font-semibold mb-3">{item.title}</h3>
+                <h3 
+  className="text-xl font-semibold mb-3"
+  style={{ color: item.color }}
+>
+  {item.title}
+</h3>
                 <p className="text-gray-300 text-sm">{item.description}</p>
               </div>
             </motion.div>
@@ -91,9 +98,7 @@ const About: React.FC = () => {
         >
           <h3 className="text-2xl font-bold mb-4">Career Objective</h3>
           <p className="text-gray-300">
-            Aspiring Software Engineer with a strong foundation in Java, frontend technologies (HTML, CSS, JavaScript), 
-            and problem-solving skills. Knowledgeable in OOPs, DSA, and experienced in collaborative projects and hackathons, 
-            showcasing leadership and creativity.
+            To contribute as a Software Engineer by leveraging my strengths in Java, frontend development, and problem-solving while continuing to learn, innovate, and collaborate in dynamic environments.
           </p>
         </motion.div>
       </div>

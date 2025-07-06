@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowDown, Github as GitHub, Linkedin, Mail } from 'lucide-react';
 import { Link } from 'react-scroll';
+import { Typewriter } from 'react-simple-typewriter';
 
 const Hero: React.FC = () => {
+  const [showCursor, setShowCursor] = useState(true);
+
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center relative pt-24 px-4">
       <div className="container mx-auto flex flex-col md:flex-row items-center md:items-start justify-between gap-10 relative z-10">
@@ -25,7 +28,16 @@ const Hero: React.FC = () => {
         <div className="w-full md:w-2/3 md:pl-24 flex flex-col items-center md:items-start text-center md:text-left">
           <p className="text-[#80dfff] font-medium mb-2">Hello, I'm</p>
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-            Vallapi Shambhavi
+            <Typewriter
+              words={['Vallapi Shambhavi']}
+              cursor={showCursor}
+              cursorStyle="|"
+              typeSpeed={100}
+              deleteSpeed={50}
+              delaySpeed={2000}
+              loop={1}
+              onTypeDone={() => setShowCursor(false)}  // Hides cursor after done
+            />
           </h1>
           <h2 className="text-lg sm:text-xl md:text-2xl text-sky-400 mb-6">
             Aspiring Software Engineer

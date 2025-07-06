@@ -9,9 +9,138 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <title>Vallapi Shambhavi | Portfolio</title>
     <meta name="description" content="Vallapi Shambhavi, an aspiring software engineer with expertise in Java, web development, and problem-solving.">
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: auto;
+        background: #000;
+        font-family: 'Poppins', sans-serif;
+      }
+      canvas {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: -1;
+      }
+    </style>
   </head>
-  <body class="font-['Poppins',sans-serif]">
+  <body>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <canvas id="bg-animation"></canvas>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script>
+      const canvas = document.getElementById('bg-animation');
+      const ctx = canvas.getContext('2d');
+
+      let width = canvas.width = window.innerWidth;
+      let height = canvas.height = window.innerHeight;
+
+      window.addEventListener('resize', () => {
+        width = canvas.width = window.innerWidth;
+        height = canvas.height = window.innerHeight;
+      });
+
+      const dots = Array.from({ length: 40 }, () => ({
+        x: Math.random() * width,
+        y: Math.random() * height,
+        vx: (Math.random() - 0.5) * 0.3,
+        vy: (Math.random() - 0.5) * 0.3,
+        opacity: Math.random(),
+        fadingIn: Math.random() < 0.5
+      }));
+
+      const symbolSet = ['{', '}', '<>', '()', '&', '!', '@', '#', '$', '%', '^', '*', '+', '=', '-', '_', '|', ':', ';', '"', "'", '?'];
+      const symbols = Array.from({ length: 2 }, () => createSymbol());
+
+      function createSymbol() {
+        return {
+          char: symbolSet[Math.floor(Math.random() * symbolSet.length)],
+          x: Math.random() * width,
+          y: Math.random() * height,
+          vx: (Math.random() - 0.5) * 0.1,
+          vy: (Math.random() - 0.5) * 0.1,
+          size: Math.random() * 4 + 14,
+          opacity: 1
+        };
+      }
+
+      function draw() {
+        ctx.clearRect(0, 0, width, height);
+
+        // Draw dots
+        dots.forEach(dot => {
+          ctx.globalAlpha = dot.opacity * 0.6;
+          ctx.fillStyle = 'rgba(0, 255, 255, 1)';
+          ctx.beginPath();
+          ctx.arc(dot.x, dot.y, 1.5, 0, Math.PI * 2);
+          ctx.fill();
+
+          // Twinkle effect
+          if (dot.fadingIn) {
+            dot.opacity += 0.005;
+            if (dot.opacity >= 1) dot.fadingIn = false;
+          } else {
+            dot.opacity -= 0.005;
+            if (dot.opacity <= 0) {
+              dot.x = Math.random() * width;
+              dot.y = Math.random() * height;
+              dot.opacity = 0;
+              dot.fadingIn = true;
+            }
+          }
+        });
+
+        // Draw lines between dots
+        ctx.strokeStyle = 'rgba(0, 255, 255, 0.2)';
+        for (let i = 0; i < dots.length; i++) {
+          for (let j = i + 1; j < dots.length; j++) {
+            const dx = dots[i].x - dots[j].x;
+            const dy = dots[i].y - dots[j].y;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+            if (dist < 80) {
+              ctx.globalAlpha = 0.2 * (1 - dist / 80);
+              ctx.beginPath();
+              ctx.moveTo(dots[i].x, dots[i].y);
+              ctx.lineTo(dots[j].x, dots[j].y);
+              ctx.stroke();
+            }
+          }
+        }
+
+        // Draw symbols
+        symbols.forEach((sym, index) => {
+          ctx.globalAlpha = sym.opacity;
+          ctx.fillStyle = 'rgba(0, 255, 255, 1)';
+          ctx.font = `${sym.size}px Poppins`;
+          ctx.fillText(sym.char, sym.x, sym.y);
+
+          sym.x += sym.vx;
+          sym.y += sym.vy;
+          sym.opacity -= 0.005;
+
+          if (sym.opacity <= 0) {
+            symbols[index] = createSymbol();
+          }
+
+          if (sym.x < 0 || sym.x > width) sym.vx *= -1;
+          if (sym.y < 0 || sym.y > height) sym.vy *= -1;
+        });
+
+        // Move dots
+        dots.forEach(dot => {
+          dot.x += dot.vx;
+          dot.y += dot.vy;
+          if (dot.x < 0 || dot.x > width) dot.vx *= -1;
+          if (dot.y < 0 || dot.y > height) dot.vy *= -1;
+        });
+
+        ctx.globalAlpha = 1;
+        requestAnimationFrame(draw);
+      }
+
+      draw();
+    </script>
   </body>
 </html>
