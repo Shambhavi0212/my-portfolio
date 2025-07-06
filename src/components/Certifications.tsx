@@ -93,7 +93,7 @@ const Certifications: React.FC = () => {
       description: "CodeChef certification covering the basics of HTML and CSS for web development.",
       icon: "Layout",
       color: "from-lime-500 to-green-700",
-      url: "https://example.com/codechef-html-css-certificate"
+      url: "https://www.codechef.com/certificates/public/c50e075"
     }
   ];
 
@@ -107,7 +107,10 @@ const Certifications: React.FC = () => {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Technical Certifications</h2>
+<h2 
+  className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-yellow-400 via-pink-400 to-yellow-400 bg-clip-text text-transparent"
+>
+  Technical Certifications</h2>
           <div className="w-20 h-1 bg-[#80dfff] mx-auto mb-8"></div>
           <p className="max-w-3xl mx-auto text-gray-300">
             Professional certifications that enhance my technical expertise and validate my skills.

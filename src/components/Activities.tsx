@@ -52,7 +52,11 @@ const Activities: React.FC = () => {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Co-curricular & Extra-curricular Activities</h2>
+<h2 
+  className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-sky-400 via-teal-400 to-sky-400 bg-clip-text text-transparent"
+>
+  Co-curricular & Extra-curricular Activities
+</h2>
           <div className="w-20 h-1 bg-[#80dfff] mx-auto mb-8"></div>
           <p className="max-w-3xl mx-auto text-gray-300">
             A collection of my technical and social activities that showcase my diverse interests and commitment to both professional growth and social responsibility.
