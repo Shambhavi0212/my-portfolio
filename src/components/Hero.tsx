@@ -78,6 +78,18 @@ const Hero: React.FC = () => {
             <a href="mailto:shambhavivallapi@gmail.com" className="text-white hover:text-[#80dfff] transition-colors">
               <Mail size={24} />
             </a>
+            <a 
+              href="https://www.codechef.com/users/shambhavi_0212"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:opacity-80 transition-opacity"
+            >
+              <img 
+                src="/codechef_icon.png"  
+                alt="CodeChef"
+                className="w-6 h-6"
+              />
+            </a>
           </div>
         </div>
 

@@ -96,7 +96,8 @@ const About: React.FC = () => {
           viewport={{ once: true, amount: 0.2 }}
           variants={fadeIn}
         >
-          <h3 className="text-2xl font-bold mb-4">Career Objective</h3>
+        <h3 className="text-2xl font-bold mb-4 text-[#80dfff]">Career Objective</h3>
+
           <p className="text-gray-300">
             To contribute as a Software Engineer by leveraging my strengths in Java, frontend development, and problem-solving while continuing to learn, innovate, and collaborate in dynamic environments.
           </p>
