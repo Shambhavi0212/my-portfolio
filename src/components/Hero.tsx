@@ -28,7 +28,7 @@ const Hero: React.FC = () => {
         <div className="w-full md:w-2/3 md:pl-24 flex flex-col items-center md:items-start text-center md:text-left">
           <p className="text-[#80dfff] font-medium mb-2">Hello, I'm</p>
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-            <Typewriter
+           <Typewriter
               words={['Vallapi Shambhavi']}
               cursor={showCursor}
               cursorStyle="|"
@@ -36,7 +36,7 @@ const Hero: React.FC = () => {
               deleteSpeed={50}
               delaySpeed={2000}
               loop={1}
-              onTypeDone={() => setShowCursor(false)}  // Hides cursor after done
+              onLoopDone={() => setShowCursor(false)}  
             />
           </h1>
           <h2 className="text-lg sm:text-xl md:text-2xl text-sky-400 mb-6">
@@ -75,9 +75,6 @@ const Hero: React.FC = () => {
             <a href="https://www.linkedin.com/in/shambhavi0212/" className="text-white hover:text-[#80dfff] transition-colors">
               <Linkedin size={24} />
             </a>
-            <a href="mailto:shambhavivallapi@gmail.com" className="text-white hover:text-[#80dfff] transition-colors">
-              <Mail size={24} />
-            </a>
             <a 
               href="https://www.codechef.com/users/shambhavi_0212"
               target="_blank"
@@ -89,6 +86,9 @@ const Hero: React.FC = () => {
                 alt="CodeChef"
                 className="w-6 h-6"
               />
+            </a>
+             <a href="mailto:shambhavivallapi@gmail.com" className="text-white hover:text-[#80dfff] transition-colors">
+              <Mail size={24} />
             </a>
           </div>
         </div>
