@@ -32,7 +32,7 @@ const Projects: React.FC = () => {
     {
       id: 4,
       title: "Pizza Calculator Billing System",
-      description: "Java-based console application using core Java features for pizza billing with detailed bill summary, taxes, and discounts.",
+      description: "Java based console application using core Java features for pizza billing with detailed bill summary, taxes, and discounts.",
       tools: ["Java", "JDK", "Eclipse"],
       image: "https://images.pexels.com/photos/1146760/pexels-photo-1146760.jpeg",
       giturl: "https://github.com/shambhavi0212"
