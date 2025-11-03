@@ -33,6 +33,13 @@ const Certifications: React.FC = () => {
       url: "/servicenow-csa-certificate.pdf"
     },
     {
+    title: "Oracle Cloud Infrastructure 2025 Certified Generative AI Professional",
+    description: "Professional certification by Oracle validating expertise in Generative AI concepts, prompt engineering, and cloud-based AI solutions. Valid until October 29, 2027.",
+    icon: "Bot",
+    color: "from-red-500 to-orange-600",
+    url: "https://catalog-education.oracle.com/pls/certview/sharebadge?id=FB57120FFA1F5B25FAA92FCD901BB0063CFEFDDF5723858B72989952C52A45D6"
+  },
+    {
       title: "Google Cloud – Generative AI Virtual Internship",
       description: "Completed 10-week internship program focused on generative AI technologies and cloud implementations.",
       icon: "Cloud",
