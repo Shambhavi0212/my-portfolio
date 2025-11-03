@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import ProjectCard from './ProjectCard';
 
 const Projects: React.FC = () => {
-  const projects = [
+  const experiences = [
     {
       id: 1,
       title: "50 Days of DSA Coding Challenge Level-1",
@@ -58,7 +58,7 @@ const Projects: React.FC = () => {
   ];
 
   return (
-    <section id="projects" className="py-20">
+    <section id="experience" className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div 
           className="text-center mb-16"
