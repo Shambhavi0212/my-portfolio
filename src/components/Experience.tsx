@@ -67,7 +67,7 @@ const Projects: React.FC = () => {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Projects</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Experience</h2>
           <div className="w-20 h-1 bg-[#80dfff] mx-auto mb-8"></div>
           <p className="max-w-3xl mx-auto text-gray-300">
             A showcase of my technical skills and problem-solving abilities through various projects.

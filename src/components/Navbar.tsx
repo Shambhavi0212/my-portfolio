@@ -9,7 +9,7 @@ const Navbar: React.FC = () => {
     { name: 'Home', to: 'hero' },
     { name: 'About Me', to: 'about' },
     { name: 'Skills', to: 'skills' },
-    { name: 'Projects', to: 'projects' },
+    { name: 'Experience', to: 'experience' },
     { name: 'Education', to: 'education' },
     { name: 'Certifications', to: 'certifications' },
     { name: 'Activities', to: 'activities' },
