@@ -21,6 +21,14 @@ const Projects: React.FC = () => {
     image: "/laptop2.png",
     giturl: "https://github.com/Shambhavi0212/50-Days-of-Coding-DSA-Level-2"
    },
+   {
+  id: 6,
+  title: "30 Days of OOPs Challenge",
+  description: "A 30-day journey to master Object-Oriented Programming (OOP) concepts in Java. Includes daily notes, code examples, and real-life implementations of all 4 OOP principles.",
+  tools: ["Java", "OOP", "Encapsulation", "Inheritance", "Polymorphism", "Abstraction"],
+  image: "/oops.png", 
+  giturl: "https://github.com/Shambhavi0212/30-Days-of-OOPs-Challenge"
+  },
 
     {
       id: 2,
