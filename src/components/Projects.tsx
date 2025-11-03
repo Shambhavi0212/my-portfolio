@@ -16,9 +16,9 @@ const Projects: React.FC = () => {
     {
     id: 5,
     title: "50 Days of DSA Coding Challenge Level-2",
-    description: "Completed the advanced Level-2 phase of the 50 Days DSA Challenge, focusing on manipulating array data structures, algorithms, and optimization problems on CodeChef and LeetCode.",
+    description: "Completed the advanced Level-2 phase of the 50 Days DSA Challenge, focusing on manipulating array data structures,strings, algorithms, and optimization problems on CodeChef and LeetCode.",
     tools: ["Java", "CodeChef", "LeetCode"],
-    image: "/laptop.png",
+    image: "/laptop2.png",
     giturl: "https://github.com/Shambhavi0212/50-Days-of-Coding-DSA-Level-2"
    },
 
