@@ -2,34 +2,32 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import ProjectCard from './ProjectCard';
 
-const Projects: React.FC = () => {
+const Experience: React.FC = () => {
   const experiences = [
     {
       id: 1,
       title: "50 Days of DSA Coding Challenge Level-1",
       description: "Completed a self-driven 50 Days of Coding Challenge focused on mastering Data Structures and Algorithms. Solved problems daily on CodeChef and LeetCode, covering topics such as arrays, strings.",
       tools: ["Java", "CodeChef", "LeetCode"],
-      image : "/laptop.png",
+      image: "/laptop.png",
       giturl: "https://github.com/Shambhavi0212/50-Days-of-Coding-DSA-Level-1"
     },
-
     {
-    id: 5,
-    title: "50 Days of DSA Coding Challenge Level-2",
-    description: "Completed the advanced Level-2 phase of the 50 Days DSA Challenge, focusing on manipulating array data structures,strings, algorithms, and optimization problems on CodeChef and LeetCode.",
-    tools: ["Java", "CodeChef", "LeetCode"],
-    image: "/laptop2.png",
-    giturl: "https://github.com/Shambhavi0212/50-Days-of-Coding-DSA-Level-2"
-   },
-   {
-  id: 6,
-  title: "30 Days of OOPs Challenge",
-  description: "A 30-day journey to master Object-Oriented Programming (OOP) concepts in Java. Includes daily notes, code examples, and real-life implementations of all 4 OOP principles.",
-  tools: ["Java", "OOP", "Encapsulation", "Inheritance", "Polymorphism", "Abstraction"],
-  image: "/oops.png", 
-  giturl: "https://github.com/Shambhavi0212/30-Days-of-OOPs-Challenge"
-  },
-
+      id: 5,
+      title: "50 Days of DSA Coding Challenge Level-2",
+      description: "Completed the advanced Level-2 phase of the 50 Days DSA Challenge, focusing on manipulating array data structures, strings, algorithms, and optimization problems on CodeChef and LeetCode.",
+      tools: ["Java", "CodeChef", "LeetCode"],
+      image: "/laptop2.png",
+      giturl: "https://github.com/Shambhavi0212/50-Days-of-Coding-DSA-Level-2"
+    },
+    {
+      id: 6,
+      title: "30 Days of OOPs Challenge",
+      description: "A 30-day journey to master Object-Oriented Programming (OOP) concepts in Java. Includes daily notes, code examples, and real-life implementations of all 4 OOP principles.",
+      tools: ["Java", "OOP", "Encapsulation", "Inheritance", "Polymorphism", "Abstraction"],
+      image: "/oops.png", 
+      giturl: "https://github.com/Shambhavi0212/30-Days-of-OOPs-Challenge"
+    },
     {
       id: 2,
       title: "Forest Endangered Detection System",
@@ -37,7 +35,6 @@ const Projects: React.FC = () => {
       tools: ["Arduino", "Tilt sensor", "Gas sensor", "Fire sensor"],
       image: "https://images.pexels.com/photos/957024/forest-trees-perspective-bright-957024.jpeg",
       giturl: "https://github.com/shambhavi0212"
-
     },
     {
       id: 3,
@@ -75,10 +72,10 @@ const Projects: React.FC = () => {
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
+          {experiences.map((experience, index) => (
             <ProjectCard 
-              key={project.id}
-              project={project}
+              key={experience.id}
+              project={experience}
               index={index}
             />
           ))}
@@ -88,4 +85,4 @@ const Projects: React.FC = () => {
   );
 };
 
-export default Projects;
+export default Experience;
