@@ -57,7 +57,7 @@ const Hero: React.FC = () => {
               Download Resume
             </a>
             <Link
-              to="projects"
+              to="experience"
               spy={true}
               smooth={true}
               offset={-80}
