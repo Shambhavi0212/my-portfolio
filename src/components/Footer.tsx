@@ -27,16 +27,54 @@ const Footer: React.FC = () => {
           
           <div>
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
-            <ul className="space-y-2">
-              <li><a href="#hero" className="text-gray-400 hover:text-[#80dfff] transition-colors">Home</a></li>
-              <li><a href="#about" className="text-gray-400 hover:text-[#80dfff] transition-colors">About</a></li>
-              <li><a href="#skills" className="text-gray-400 hover:text-[#80dfff] transition-colors">Skills</a></li>
-              <li><a href="#projects" className="text-gray-400 hover:text-[#80dfff] transition-colors">Projects</a></li>
-              <li><a href="#education" className="text-gray-400 hover:text-[#80dfff] transition-colors">Education</a></li>
-              <li><a href="#certifications" className="text-gray-400 hover:text-[#80dfff] transition-colors">Certifications</a></li>
-              <li><a href="#activities" className="text-gray-400 hover:text-[#80dfff] transition-colors">Activities</a></li>
-              <li><a href="#contact" className="text-gray-400 hover:text-[#80dfff] transition-colors">Contact</a></li>
-            </ul>
+<ul className="space-y-2">
+  <li>
+    <a href="#hero" className="text-gray-400 hover:text-[#80dfff] transition-colors">
+      Home
+    </a>
+  </li>
+  <li>
+    <a href="#about" className="text-gray-400 hover:text-[#80dfff] transition-colors">
+      About
+    </a>
+  </li>
+  <li>
+    <a href="#skills" className="text-gray-400 hover:text-[#80dfff] transition-colors">
+      Skills
+    </a>
+  </li>
+  <li>
+    <a href="#gallery" className="text-gray-400 hover:text-[#80dfff] transition-colors">
+      Gallery
+    </a>
+  </li>
+  <li>
+    <a href="#projects" className="text-gray-400 hover:text-[#80dfff] transition-colors">
+      Projects
+    </a>
+  </li>
+  <li>
+    <a href="#education" className="text-gray-400 hover:text-[#80dfff] transition-colors">
+      Education
+    </a>
+  </li>
+  <li>
+    <a href="#certifications" className="text-gray-400 hover:text-[#80dfff] transition-colors">
+      Certifications
+    </a>
+  </li>
+  <li>
+    <a href="#activities" className="text-gray-400 hover:text-[#80dfff] transition-colors">
+      Activities
+    </a>
+  </li>
+  <li>
+    <a href="#contact" className="text-gray-400 hover:text-[#80dfff] transition-colors">
+      Contact
+    </a>
+  </li>
+</ul>
+
           </div>
           
           <div>
