@@ -12,7 +12,6 @@ import {
 } from 'lucide-react';
 
 const Certifications: React.FC = () => {
-  // Map icon names to actual components
   const iconMap: { [key: string]: React.ElementType } = {
     Cloud,
     Database,
@@ -26,6 +25,13 @@ const Certifications: React.FC = () => {
 
   const certifications = [
     {
+      title: "Certified Application Developer",
+      description: "Professional certification validating expertise in application development, covering design, development, testing, and deployment of scalable applications.",
+      icon: "Code",
+      color: "from-cyan-500 to-blue-600",
+      url: "/certified-application-developer-certificate.pdf"
+    },
+    {
       title: "ServiceNow Certified System Administrator (CSA)",
       description: "Successfully completed professional certification in ServiceNow administration, covering configuration, UI customization, and workflow automation.",
       icon: "FileCheck",
@@ -33,12 +39,12 @@ const Certifications: React.FC = () => {
       url: "/servicenow-csa-certificate.pdf"
     },
     {
-    title: "Oracle Cloud Infrastructure 2025 Certified Generative AI Professional",
-    description: "Professional certification by Oracle validating expertise in Generative AI concepts, prompt engineering, and cloud-based AI solutions. Valid until October 29, 2027.",
-    icon: "Bot",
-    color: "from-red-500 to-orange-600",
-    url: "https://catalog-education.oracle.com/pls/certview/sharebadge?id=FB57120FFA1F5B25FAA92FCD901BB0063CFEFDDF5723858B72989952C52A45D6"
-  },
+      title: "Oracle Cloud Infrastructure 2025 Certified Generative AI Professional",
+      description: "Professional certification by Oracle validating expertise in Generative AI concepts, prompt engineering, and cloud-based AI solutions. Valid until October 29, 2027.",
+      icon: "Bot",
+      color: "from-red-500 to-orange-600",
+      url: "https://catalog-education.oracle.com/pls/certview/sharebadge?id=FB57120FFA1F5B25FAA92FCD901BB0063CFEFDDF5723858B72989952C52A45D6"
+    },
     {
       title: "Google Cloud – Generative AI Virtual Internship",
       description: "Completed 10-week internship program focused on generative AI technologies and cloud implementations.",
@@ -114,10 +120,9 @@ const Certifications: React.FC = () => {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6 }}
         >
-<h2 
-  className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-yellow-400 via-pink-400 to-yellow-400 bg-clip-text text-transparent"
->
-  Technical Certifications</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-yellow-400 via-pink-400 to-yellow-400 bg-clip-text text-transparent">
+            Technical Certifications
+          </h2>
           <div className="w-20 h-1 bg-[#80dfff] mx-auto mb-8"></div>
           <p className="max-w-3xl mx-auto text-gray-300">
             Professional certifications that enhance my technical expertise and validate my skills.
