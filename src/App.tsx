@@ -8,6 +8,7 @@ import Certifications from './components/Certifications';
 import Activities from './components/Activities';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import Gallery from './components/Gallery';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <main className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <Hero />
         <About />
+        <Gallery />
         <Skills />
         <Experience />
         <Education />
