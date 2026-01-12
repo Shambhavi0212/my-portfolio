@@ -24,21 +24,23 @@ const Gallery = () => {
   }, []);
 
   return (
-<section id="gallery" className="py-24 px-6 relative">
-      <h2 className="text-4xl md:text-5xl font-bold text-center mb-14 tracking-wide">
-        Gallery
-      </h2>
+    <section id="gallery" className="py-24 px-6 relative">
+      {/* Heading */}
+      <div className="text-center mb-16">
+        <h2 className="text-3xl md:text-4xl font-bold mb-4">Gallery</h2>
+        <div className="w-20 h-1 bg-[#80dfff] mx-auto"></div>
+      </div>
 
+      {/* Image Slider */}
       <div className="flex justify-center items-center">
         <div className="relative overflow-hidden rounded-3xl p-2 backdrop-blur-md bg-white/5 border border-cyan-400/30 shadow-[0_0_40px_rgba(34,211,238,0.15)]">
-  <img
-    key={current}
-    src={images[current]}
-    alt="Gallery Slide"
-    className="w-full max-w-6xl h-[280px] sm:h-[360px] lg:h-[460px] object-contain rounded-2xl transition-all duration-700 ease-in-out animate-fadeSlide"
-  />
-</div>
-
+          <img
+            key={current}
+            src={images[current]}
+            alt="Gallery Slide"
+            className="w-full max-w-6xl h-[280px] sm:h-[360px] lg:h-[460px] object-contain rounded-2xl transition-all duration-700 ease-in-out"
+          />
+        </div>
       </div>
 
       {/* Dots */}
