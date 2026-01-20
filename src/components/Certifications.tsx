@@ -25,7 +25,7 @@ const Certifications: React.FC = () => {
 
   const certifications = [
     {
-      title: "Certified Application Developer",
+      title: "ServiceNow Certified Application Developer",
       description: "Professional certification validating expertise in application development, covering design, development, testing, and deployment of scalable applications.",
       icon: "Code",
       color: "from-cyan-500 to-blue-600",
