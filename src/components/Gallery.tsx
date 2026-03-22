@@ -53,16 +53,12 @@ const Gallery = () => {
       <div className="w-20 h-1 bg-[#80dfff] mx-auto mb-12"></div>
 
       {/* Container */}
-      <div
-        className="relative w-full max-w-6xl mx-auto h-[320px] sm:h-[420px] lg:h-[520px] overflow-hidden rounded-3xl border border-cyan-400/20 shadow-[0_0_80px_rgba(34,211,238,0.25)] flex items-center justify-center"
-        onMouseEnter={() => setIsPaused(true)}
-        onMouseLeave={() => setIsPaused(false)}
-      >
+      <div className="relative w-full max-w-6xl mx-auto h-[320px] sm:h-[420px] lg:h-[520px] overflow-hidden rounded-3xl border border-cyan-400/20 shadow-[0_0_80px_rgba(34,211,238,0.25)] flex items-center justify-center">
 
         {/* Fixed background */}
         <div className="absolute inset-0 bg-gradient-to-br from-[#021d2b] via-[#043a4d] to-[#010c14]" />
 
-        {/* Image */}
+        {/* Image animation */}
         <AnimatePresence custom={direction} mode="wait">
           <motion.img
             key={current}
@@ -72,12 +68,12 @@ const Gallery = () => {
             initial="enter"
             animate="center"
             exit="exit"
-            transition={{ duration: 0.6, ease: "easeInOut" }}
+            transition={{ duration: 0.8, ease: "easeInOut" }}
             className="relative max-h-full max-w-full object-contain rounded-2xl shadow-[0_0_40px_rgba(0,0,0,0.6)] z-10"
           />
         </AnimatePresence>
 
-        {/* Glow */}
+        {/* Glow overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-black/20 pointer-events-none" />
       </div>
 
@@ -91,8 +87,8 @@ const Gallery = () => {
               setDirection(index > current ? 1 : -1);
               setCurrent(index);
 
-              // resume after 5 sec
-              setTimeout(() => setIsPaused(false), 1000);
+              // resume after 5 seconds
+              setTimeout(() => setIsPaused(false), 5000);
             }}
             className={`w-3 h-3 rounded-full cursor-pointer transition-all ${
               current === index
