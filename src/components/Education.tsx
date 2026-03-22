@@ -29,7 +29,7 @@ const Education: React.FC = () => {
 
   const achievements = [
     "Java Certification – Earned from HackerRank for proficiency in core Java concepts",
-    "Topper Medallist – 1st and 2nd years for academic excellence",
+    "Topper Medallist – 1st, 2nd, 3rd  years for academic excellence",
     "Poster Presentation Winner – 3rd place at college tech fest for India's Space Triumph: A New Era of Technology and Innovation"
   ];
 
