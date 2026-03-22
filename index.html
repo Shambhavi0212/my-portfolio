@@ -2,13 +2,27 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    
+    <!-- ✅ Google Analytics START -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSM39SQL5C"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-YSM39SQL5C');
+    </script>
+    <!-- ✅ Google Analytics END -->
+
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
     <title>Vallapi Shambhavi | Portfolio</title>
     <meta name="description" content="Vallapi Shambhavi, an aspiring software engineer with expertise in Java, web development, and problem-solving.">
+
     <style>
       body {
         margin: 0;
@@ -25,11 +39,14 @@
       }
     </style>
   </head>
+
   <body>
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
     <canvas id="bg-animation"></canvas>
     <div id="root"></div>
+
     <script type="module" src="/src/main.tsx"></script>
+
     <script>
       const canvas = document.getElementById('bg-animation');
       const ctx = canvas.getContext('2d');
@@ -69,7 +86,6 @@
       function draw() {
         ctx.clearRect(0, 0, width, height);
 
-        // Draw dots
         dots.forEach(dot => {
           ctx.globalAlpha = dot.opacity * 0.6;
           ctx.fillStyle = 'rgba(0, 255, 255, 1)';
@@ -77,7 +93,6 @@
           ctx.arc(dot.x, dot.y, 1.5, 0, Math.PI * 2);
           ctx.fill();
 
-          // Twinkle effect
           if (dot.fadingIn) {
             dot.opacity += 0.005;
             if (dot.opacity >= 1) dot.fadingIn = false;
@@ -92,7 +107,6 @@
           }
         });
 
-        // Draw lines between dots
         ctx.strokeStyle = 'rgba(0, 255, 255, 0.7)';
         for (let i = 0; i < dots.length; i++) {
           for (let j = i + 1; j < dots.length; j++) {
@@ -110,7 +124,6 @@
           }
         }
 
-        // Draw symbols
         symbols.forEach((sym, index) => {
           ctx.globalAlpha = sym.opacity;
           ctx.fillStyle = 'rgba(0, 255, 255, 1)';
@@ -129,7 +142,6 @@
           if (sym.y < 0 || sym.y > height) sym.vy *= -1;
         });
 
-        // Move dots
         dots.forEach(dot => {
           dot.x += dot.vx;
           dot.y += dot.vy;
